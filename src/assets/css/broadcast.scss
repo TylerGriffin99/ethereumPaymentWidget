@@ -1,0 +1,115 @@
+.broadcast {
+  background: white;
+
+  &__header {
+    padding: 25px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 32px 0 rgba(65, 101, 128, 0.11);
+  }
+
+  &__body {
+    margin: 50px auto;
+    padding: 0 15px;
+    text-align: center;
+    max-width: 400px;
+
+    &-item {
+      &:nth-child(2) {
+        margin-top: 25px;
+        border-top: 1px dashed $theme-border;
+        padding-top: 20px;
+      }
+    }
+
+    &.list {
+      margin: 65px auto;
+    }
+  }
+
+  &__list {
+    margin-bottom: 20px;
+
+    div {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+
+    &.broadcast {
+      background-image: url($image-path + 'icons/broadcasted-emerald.svg');
+    }
+
+    &.failed {
+      background-image: url($image-path + 'icons/icon-error.svg');
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #141927;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #727b8f;
+    margin-bottom: 12px;
+
+    &.success {
+      color: $theme-emerald-regular;
+    }
+  }
+
+  &__text-bold {
+    font-size: 14px;
+    font-weight: 600;
+    color: #475065;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+
+    &.link {
+      transition: color .3s;
+
+      &:hover {
+        color: $theme-emerald-hover;
+      }
+    }
+  }
+
+  &__text-light {
+    font-size: 14px;
+    font-weight: 500;
+    color: #727b8f;
+    margin-left: 10px;
+  }
+
+  &__copy {
+    margin-left: 10px;
+
+    &-icon {
+      display: inline-block;
+      width: 13px;
+      height: 16px;
+      background-image: url($image-path + 'icons/copy-emerald.svg');
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .broadcast__text-light {
+      text-align: left;
+    }
+  }
+}

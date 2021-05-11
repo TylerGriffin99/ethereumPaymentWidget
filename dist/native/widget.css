@@ -1,0 +1,130 @@
+.kyber-widget-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-size: auto 26px;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    border-radius: 30px;
+    font-weight: 500;
+    padding: 12px 37px;
+    height: 45px;
+    max-width: 100%;
+    text-transform: uppercase;
+    background-color: #00a2bc;
+    color: #f8f8f8;
+    transition: background-color .3s;
+}
+
+.kyber-widget-button:hover {
+    background-color: #02c2e0;
+}
+
+.kyber-widget-button:active {
+    top: 1px;
+}
+
+/* ========== Theme Sunset Settings ========== */
+
+.kyber-widget-button.theme-sunset {
+    background-color: #ee8006;
+}
+
+.kyber-widget-button.theme-sunset:hover {
+    background-color: #ffb15e;
+}
+
+/* ========== Theme Ocean Settings ========== */
+
+.kyber-widget-button.theme-ocean {
+    background-color: #1F87F0;
+}
+
+.kyber-widget-button.theme-ocean:hover {
+    background-color: #3fbdfc;
+}
+
+/* ========== Theme Dark Settings ========== */
+
+.kyber-widget-button.theme-dark {
+    background-color: #424242;
+}
+
+.kyber-widget-button.theme-dark:hover {
+    background-color: #605f5f;
+}
+
+#kyber-widget {
+    position: absolute;
+    box-sizing: border-box;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 960px;
+}
+
+#kyber-widget-overlay {
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    z-index: 99999;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: fadein .3s;
+}
+
+.hidden-overlay {
+    animation: fadeout .3s forwards !important;
+}
+
+@keyframes fadeout {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#kyber-widget-overlay::before {
+    content: "×";
+    position: absolute;
+    top: 16px;
+    right: 8px;
+    display: inline-block;
+    padding: 15px 0;
+    font-size: 36px;
+    color: #fff;
+    line-height: 0;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#kyber-widget-iframe {
+    position: absolute;
+    max-width: 990px;
+    height: 650px;
+    width: 100%;
+    max-height: 90%;
+    box-sizing: border-box;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    border: 0;
+}
+
+#kyber-widget.embedded-iframe,
+#kyber-widget-iframe.embedded-iframe {
+    transform: translateX(-50%);
+    top: 0;
+}
