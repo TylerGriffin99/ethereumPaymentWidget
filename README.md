@@ -8,7 +8,7 @@ The widget provides a friendly and convenient user interface for users to use ER
 ## Running the development app
 From the root directory run the following commands
 
- `yarn`
+ `yarn`  
  `yarn run dev`
 
 The head to `http://0.0.0.0:3002/` in Google Chrome and the payment app will be rendered in the Chrome window
